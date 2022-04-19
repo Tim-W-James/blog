@@ -100,8 +100,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 - [x] A completed task
 
 <details>
-  <summary>Title 1</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+  <summary>Collapsable Title</summary>
+  <p>Content</p>
 </details>
 ```
 
@@ -126,8 +126,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 - [x] A completed task
 
 <details>
-  <summary>Title 1</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+  <summary>Collapsable Title</summary>
+  <p>Content</p>
 </details>
 
 ## Links
