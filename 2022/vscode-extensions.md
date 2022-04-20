@@ -1,3 +1,4 @@
+VSCode is highly extensible and customizable. Though VSCode is technically a text editor, the extensions in this list will start to turn it into a feature rich IDE.
 
 ## Getting Started
 
@@ -26,19 +27,28 @@
 - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks): Mark lines and jump to them.
 - [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock): Subtly change the workspace color of your workspace.
 - [Output Colorizer](https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer): Syntax highlighting for log files.
+- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2): ~~A customizable extension for colorizing matching brackets.~~
+Note: this is now a built-in feature of VSCode, add the following to your settings.json:
+
+```json
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+```
+
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview): Shows image preview in the gutter and on hover.
 - [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf): Display pdf file in VSCode.
 
 ## Code Editing
 
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): General purpose code formatter.
-- [Better Comments](https://marketplace.visualstudio.com/items?itemName=ms-vscode.better-comments): Improve your code commenting by annotating with alert, informational, TODOs, and more.
-- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Improve highlighting of errors, warnings and other language diagnostics. Some people might find this too distracting, but I think the trade-off is worthwhile as it helps me quickly identify errors. Also works with lots of other extensions and linters.
+- [Better Comments](https://marketplace.visualstudio.com/items?itemName=ms-vscode.better-comments): Improve your code commenting by annotating with alert, informational, TODOs, and more. I've also configured it to highligh `fixme` and `note`.
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Improve highlighting of errors, warnings and other language diagnostics. Some people might find this too distracting, but I think the trade-off is worthwhile as it helps me quickly identify errors. Also works with lots of other extensions, linters and suggestions. I configured it to set a short delay before showing the error.
 - [Regex Previewer](https://marketplace.visualstudio.com/items?itemName=chrmarti.regex): Regex matches previewer.
 - [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case): Quickly change the case (camelCase, CONSTANT_CASE, snake_case, etc) of the current selection or current word.
 - [Multiple cursor case preserve](https://marketplace.visualstudio.com/items?itemName=Cardinal90.multi-cursor-case-preserve): Preserves case when editing with multiple cursors.
 - [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap): Hard word wrapping for comments and other text at a given column.
 - [Hungry Delete](https://marketplace.visualstudio.com/items?itemName=jasonlhy.hungry-delete): Delete an entire block of whitespace or tab.
+- [Tab Out](https://marketplace.visualstudio.com/items?itemName=albert.TabOut): Tab out of quotes, brackets, etc.
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-spellchecker): Spell check your code.
 - [DotEnv](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv): Support for dotenv file syntax.
 
@@ -59,7 +69,7 @@
 
 ## Diagramming
 
-- [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio): Integrates Draw.io into VS Code. Lets you use `.drawio.png` files, which are both directly editable and easily exported.
+- [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio): Integrates Draw.io into VS Code. Lets you use `.drawio.png` files, which are both directly editable and easily exported. I use the theme `atlas`.
 - [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml): Rich PlantUML support for Visual Studio Code.
 
 ## Appearance
@@ -114,4 +124,27 @@ For writing blogs like this one. VSCode has pretty good out-of-the-box support f
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more).
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Markdown linting and style checking for Visual Studio Code. Be sure to fine tune these rules to your liking.
 
-Feel free to comment with any extensions I have missed and I'll add them to the list!
+## Next Steps
+
+- Install tooling for your favorite language/tool - syntax highlighting, intellisense linting, formatting, etc.
+- Get familiar with the command pallet <kbd>CTRL+SHIFT+P</kbd>. You can search for pretty much anything you want to do, extensions included.
+- Learn and configure your keyboard shorcuts. Anything from the command pallet can be configured as a keyboard shortcut, and you can set contextual shortcuts for specific languages, etc.
+- VSCode has a built-in snippet manager, but you can download additional snippets for specific languages/tools.
+- Configure your editor settings. You can see what I'm current using [here](https://github.com/Tim-W-James/.dotfiles). Some notable configuration:
+  - Set a ruler so your lines of code don't get too long:
+
+  ```json
+  "editor.rulers": [80],
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#491f1f"
+  },
+  ```
+
+  - Make your cursor *smooth*:
+
+  ```json
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": true,
+  ```
+
+Feel free to comment with any extensions or tips I have missed and I'll add them to the list!
