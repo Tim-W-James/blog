@@ -42,13 +42,13 @@ MAGIC_ENTER_OTHER_COMMAND='ls -la .'
 
 Depending on what other software you use, there are plenty of lightweight plugins that improve autocompletion and provide aliases amoung other things. I use:
 - `git`: Aliases for Git
-- `gh`: Autocompletions for GitHub cli 
-- `nvm`: Autocompletions for nvm
-- `npm`:  Autocompletions + aliases for npm
-- `aws`: Automcompletions for aws
-- `docker`: Automcompletions for docker
-- `docker-compose`: Autocompletions + aliases for docker compose
-- `kubectl`" Autocompletions + aliases for kubectl
+- `gh`: Completions for GitHub cli 
+- `nvm`: Completions for nvm
+- `npm`:  Completions + aliases for npm
+- `aws`: Completions for aws
+- `docker`: Completions for docker
+- `docker-compose`: Completions + aliases for docker compose
+- `kubectl`" Completions + aliases for kubectl
 - `vscode`: Aliases for VS Code or VSCodium editor
 - `python`: Aliases for python
 - `pip`: Automcompletions for pip
@@ -77,16 +77,20 @@ bindkey '\eOB' history-beginning-search-forward
 zle -A {.,}history-incremental-search-forward
 zle -A {.,}history-incremental-search-backward
 ```
- Similarly, to use the default tab completion, set the following options:
+  - Similarly, to use the default tab completion, set the following options:
 ```bash
 zstyle ':autocomplete:*' widget-style menu-select
 bindkey -M menuselect '\r' accept-line
 ```
- I also don't like the completions to move the prompt around too much, especially for a multiline prompt. We can change this with:
+  - I also don't like the completions to move the prompt around too much, especially for a multiline prompt. We can change this with:
 ```bash
 zstyle ':autocomplete:*' list-lines 7
 ```
- For a full list of config options, go [here](https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc).
+  - The plugin also has some issues with the prompt "" showing on some completions and eating inputs. Add this to your `.zshrc` as a workaround (however this sometimes drops completions entirely, but I still prefer this over loosing inputs):
+```bash
+zstyle ':completion:*' menu select=long
+```
+  - For a full list of config options, go [here](https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc).
 - [`zsh-z`](https://github.com/agkozak/zsh-z#for-oh-my-zsh-users): Tool to jump quickly to directories that you have visited frequently.
 
 To take things further, I recommend checking out [this](https://github.com/unixorn/awesome-zsh-plugins) curated list of plugins. 
