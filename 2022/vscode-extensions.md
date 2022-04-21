@@ -147,4 +147,6 @@ For writing blogs like this one. VSCode has pretty good out-of-the-box support f
   "editor.cursorSmoothCaretAnimation": true,
   ```
 
+  - Install a custom font. I use [Caskaydia Cove Nerd Font](https://www.nerdfonts.com/font-downloads).
+
 Feel free to comment with any extensions or tips I have missed and I'll add them to the list!
