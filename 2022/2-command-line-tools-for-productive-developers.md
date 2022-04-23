@@ -117,14 +117,23 @@ fi
 
 - [commitizen](https://www.npmjs.com/package/commitizen): Get prompted to fill out any required commit fields at commit time.
 
+## Package Mangers
+
+There are a wide range of different package managers for different environments (e.g., `APT` for `Ubuntu`) and languages (e.g., `pip` for `python`), but here are some general package managers that are good to have:
+
+- [Homebrew](https://brew.sh/): MacOS, but also available on Linux.
+- [Chocolatey](https://docs.chocolatey.org/en-us/choco/setup#more-install-options): Windows.
+- [nix](https://github.com/NixOS/nix#installation): For Unix systems, functional package manager.
+- [npm](https://nodejs.org/en/download/package-manager/): Package manager for `node`, but good to have.
 
 
 ## Specialized Tools
 
-Depending on what technologies you work with day-to-day,
+Depending on what technologies you work with day-to-day, these may or may not be relevant:
 
 - [`jq`](https://stedolan.github.io/jq/download/): JSON processor.
 - [`httpie`](https://httpie.io/cli): Command-line HTTP client (better `curl`).
+- [`wget](https://www.gnu.org/software/wget/): Another command-line HTTP client.
 - [`ngrok`](https://ngrok.com/download): Secure URL to a localhost server.
 - [`k9s`](https://github.com/derailed/k9s#installation): Manage your Kubernetes clusters in style.
   ![k9s](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0jelcf1d0z3stu2bqmt8.png)
@@ -133,6 +142,8 @@ Depending on what technologies you work with day-to-day,
 
 ## Next Steps
 
+- Customize your theme and prompt. See my guide [here](https://dev.to/timwjames/overhaul-your-terminal-with-zsh-plugins-more-3oag).
+![Custom prompt](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z0g01xs16dcyhj2ooh3h.png)
 - Use oh-my-zsh to install some zsh plugins. I've created a guide for that [here](https://dev.to/timwjames/overhaul-your-terminal-with-zsh-plugins-more-3oag). Some notable plugins include:
 - Autocomplete
 - Autosuggestions
@@ -141,3 +152,5 @@ Depending on what technologies you work with day-to-day,
 - Clipboard CLI utilities
 - `web-search` for using search engines via CLI
 - Create some aliases for frequently used commands. See all my aliases in my [`aliases.zsh`](https://github.com/Tim-W-James/.dotfiles/blob/main/oh-my-zsh/aliases.zsh). Note that for git aliases, it is best to define them in your [`.gitconfig`](https://github.com/Tim-W-James/.dotfiles/blob/main/.gitconfig).
+
+Feel free to add a comment suggesting any additional CLI tools and I'll add them to the list!
