@@ -18,7 +18,7 @@ Say you want to remove something from the staging area without modifying the fil
 
 ## 3. Revert a Commit
 
-Some commit in the history has become problematic, so create a new "revert commit" to undo changes: 
+Some commit in the history has become problematic, so create a new "revert commit" to undo changes:
 
 - Find the `ref` of the commit you want to revert: `git log`
 - Create a new revert commit: `git revert <ref>`

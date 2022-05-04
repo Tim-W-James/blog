@@ -1,7 +1,7 @@
 This guide will look at various ways you can improve your productivity by extending the functionality of your terminal, including:
 - **zsh**: A powerful shell that extends the feature set of bash.
 - **zsh plugins**: Auto-suggestions, completion, syntax highlighting and more.
-- **posh**: Custom prompt themes and display contextual information.
+- **prompts + themes**: Customize a clean prompt that displays contextual information, either using Powerlevel10k or Posh.
 
  
 ## Getting Started
@@ -68,7 +68,7 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-s
 ![zsh-syntax-highlighting](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n07i2pez1s2z23awk3id.png)
 - [`zsh-autocomplete`](https://github.com/marlonrichert/zsh-autocomplete#manual-installation): Provides completion suggestions below the prompt, in addition to a history menu. This one is powerful, but might take some getting used to. Like with autosuggestions, you can choose whether you want to use normal completions (directories, man, etc.) or history search. I like to have autocomplete for normal completions and autosuggestions for history.
 ![zsh-autocomplete](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ighgss04o86loeocmjhc.png)
- - If you're like me and don't like the history menu, but want all the other features, you can change the keybinds to use a simple history search in your `.zshrc` (make sure this is _after_ the plugins have been loaded):
+ If you're like me and don't like the history menu, but want all the other features, you can change the keybinds to use a simple history search in your `.zshrc` (make sure this is _after_ the plugins have been loaded):
 ```bash
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\eOA' history-beginning-search-backward
@@ -77,20 +77,20 @@ bindkey '\eOB' history-beginning-search-forward
 zle -A {.,}history-incremental-search-forward
 zle -A {.,}history-incremental-search-backward
 ```
-  - Similarly, to use the default tab completion, set the following options:
+ Similarly, to use the default tab completion, set the following options:
 ```bash
 zstyle ':autocomplete:*' widget-style menu-select
 bindkey -M menuselect '\r' accept-line
 ```
-  - I also don't like the completions to move the prompt around too much, especially for a multiline prompt. We can change this with:
+ I also don't like the completions to move the prompt around too much, especially for a multiline prompt. We can change this with:
 ```bash
 zstyle ':autocomplete:*' list-lines 7
 ```
-  - The plugin also has some issues with the prompt "" showing on some completions and eating inputs. Add this to your `.zshrc` as a workaround (however this sometimes drops completions entirely, but I still prefer this over loosing inputs):
+ The plugin also has some issues with the prompt "" showing on some completions and eating inputs. Add this to your `.zshrc` as a workaround (however this sometimes drops completions entirely, but I still prefer this over loosing inputs):
 ```bash
 zstyle ':completion:*' menu select=long
 ```
-  - For a full list of config options, go [here](https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc).
+ For a full list of config options, go [here](https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc).
 - [`zsh-z`](https://github.com/agkozak/zsh-z#for-oh-my-zsh-users): Tool to jump quickly to directories that you have visited frequently.
 
 To take things further, I recommend checking out [this](https://github.com/unixorn/awesome-zsh-plugins) curated list of plugins. 
@@ -103,8 +103,23 @@ ZSH_THEME="mytheme"
 ```
 I like `agnoster` best:
 ![agnoster](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ind73zeythcovna9u54a.png)
-As nice as our prompt looks, we can go further with [oh-my-posh](https://ohmyposh.dev/docs/linux):
-![clean-detailed](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/576uc6ny0fjdzi0bo4x4.png)
+As nice as our prompt looks, we can take things further.
+We have 2 options:
+
+### Option A: Powerlevel10k
+
+[Powerlevel10k](https://github.com/romkatv/powerlevel10k/blob/master/README.md#oh-my-zsh) is a highly customizable theme for zsh. It includes some nice features such as an instant prompt while plugins are loading, and a configuration wizard to get you started.
+
+This is what my prompt looks like:
+
+![Powerlevel10k](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i35t7zz1mj4upb5dsfvc.png)
+
+I've modified the configuration a bit to use custom icons for specific directories and cleaned up the git status a bit. See my [`.p10k.zsh`](https://github.com/Tim-W-James/.dotfiles/blob/main/oh-my-zsh/.p10k.zsh)
+
+### Option B: oh-my-posh
+
+[oh-my-posh](https://ohmyposh.dev/docs/linux):
+![clean-detailed](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/576uc6ny0fjdzi0bo4x4.png) provides a wide range of themes to choose from, though is missing some features of Powerlevel10k such as instant prompt.
 * Follow installation instructions and find a [theme](https://ohmyposh.dev/docs/themes) you like. Some favourites of mine are `clean-detailed`, `blueish`, or `nu4a`.
 * Add the path to your chosen theme to `.zshrc`:
 ```bash
@@ -167,7 +182,7 @@ export NVM_DIR="$HOME/.nvm"
 ```
  
 ## Next Steps
-- Install [tmux](https://dev.to/andrenbrandao/terminal-setup-with-zsh-tmux-dracula-theme-48lm#tmux-amp-dracula-theme) for tabs, panes and more natively in the shell. See my [`tmux.conf`](https://github.com/Tim-W-James/.dotfiles/blob/main/tmux/.tmux.conf).
+- Install [tmux](https://github.com/tmux/tmux/wiki/Installing) for tabs, panes and more natively in the shell. See [oh-my-tmux](https://github.com/gpakosz/.tmux) and my [`tmux.conf.local`](https://github.com/Tim-W-James/.dotfiles/blob/main/tmux/.tmux.conf.local).
 - Install a better terminal. My suggestions:
  - Ubuntu: [Guake](https://guake.readthedocs.io/en/latest/user/installing.html#system-wide-installation)
  - Windows: [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701#activetab=pivot:overviewtab)
