@@ -59,6 +59,7 @@ fi
 - [`exa`](https://the.exa.website/): Alternative to `colorls` (use the `--icons` flag to get icons like `colorls`).
 - [`tree`](https://www.cyberciti.biz/faq/linux-show-directory-structure-command-line/): Visualize directories in a tree-like format (lightweight alternative to `colorls` with the `-t` flag).
 ![tree](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1d7kg883xlj4xztl5nc2.png)
+- [`broot`](https://github.com/Canop/broot#broot): Like tree, but works better with big directories.
 - [`z`](https://github.com/rupa/z): Quickly jump between directories based on history (For `zsh` users, it is easier to install [this](https://github.com/agkozak/zsh-z#for-oh-my-zsh-users) plugin)
 
  
@@ -67,6 +68,11 @@ fi
 ![vtop](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4sv4c9jfo0dr4lt598vb.png)
 - [`croc`](https://github.com/schollz/croc#install): Simple file transfer via CLI.
 - [`secman`](https://github.com/scmn-dev/secman#installation-): CLI password manager.
+- [`hyperfine`](https://github.com/sharkdp/hyperfine): A command-line benchmarking tool.
+- [`gping`](https://github.com/orf/gping#install-cd): Ping, but with a graph.
+- [`procs`](https://github.com/dalance/procs#homebrew): Replacement for ps.
+- [`dog`](https://github.com/ogham/dog#installation): Command-line DNS client.
+- [`duf`](https://github.com/muesli/duf#installation): A better df alternative.
 
  
 ## Git
