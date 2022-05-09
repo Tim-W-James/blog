@@ -3,6 +3,14 @@ This guide will look at various ways you can improve your productivity by extend
 - **zsh plugins**: Auto-suggestions, completion, syntax highlighting and more.
 - **prompts + themes**: Customize a clean prompt that displays contextual information, either using Powerlevel10k or Posh.
 
+We'll go from this:
+
+![bash](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/15hhws1lffppj64y7wao.png)
+
+To this:
+
+![zsh](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b4pd70jflqn9tnuo73t0.png)
+
  
 ## Getting Started
 1. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation) for any Unix based shell or WSL2, which bundles `zsh` with a set of plugins and themes.
@@ -117,7 +125,7 @@ We have 2 options:
 
 This is what my prompt looks like:
 
-![Powerlevel10k](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i35t7zz1mj4upb5dsfvc.png)
+![powerlevel10k](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sjd33y95r6wcv3it5g8x.png)
 
 I've modified the configuration a bit to use custom icons for specific directories and cleaned up the git status a bit. See my [`.p10k.zsh`](https://github.com/Tim-W-James/.dotfiles/blob/main/oh-my-zsh/.p10k.zsh)
 

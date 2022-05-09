@@ -13,7 +13,7 @@ _Note_: for any `npm` packages, make sure to install globally with `-g`.
  - See [this](https://dev.to/andrenbrandao/terminal-setup-with-zsh-tmux-dracula-theme-48lm#tmux-amp-dracula-theme) blog to get started with tmux.
  - See my [`.tmux.conf`](https://github.com/Tim-W-James/.dotfiles/blob/main/tmux/.tmux.conf).
  - Alternatively, you can also use [oh-my-tmux](https://github.com/gpakosz/.tmux) along with a bunch of plugins to extend the capabilities of tmux. See my [`.tmux.conf.local`](https://github.com/Tim-W-James/.dotfiles/blob/main/tmux/.tmux.conf.local) which has my current configuration using this framework. This is what my tmux looks like, with a customized status bar: 
-![oh-my-tmux](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yizkmnhrgpgd16jn3kz0.png)
+![oh my tmux](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8ytdjuebjwkhwlsqeohm.png)
 - [`bat`](https://github.com/sharkdp/bat#installation): Better `cat` - supports syntax highlighting for a large number of programming and markup languages.
 ![bat](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wc1m4zsj98ecniw7rup2.png)
 - [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy#install): Makes your diffs human readable instead of machine readable. Go [here](##Git) to see usage with Git.
