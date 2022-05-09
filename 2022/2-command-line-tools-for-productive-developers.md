@@ -27,6 +27,7 @@ diffs() {
 - [`thefuck`](https://github.com/nvbn/thefuck#installation): Corrects errors in previous console commands.
 - [`how2`](https://github.com/santinic/how2#install): Finds the simplest way to do something in a unix shell using a natural language query.
 - [`direnv`](https://github.com/direnv/direnv/blob/master/docs/installation.md): Load and unload environment variables depending on the current directory (for `oh-my-zsh` users, see [this](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dotenv) alternative)
+- [`asdf`](https://github.com/asdf-vm/asdf#setup): Manage multiple runtime versions with a single CLI tool.
 - [`glow`](https://github.com/charmbracelet/glow#installation): Terminal based markdown reader.
 
  
