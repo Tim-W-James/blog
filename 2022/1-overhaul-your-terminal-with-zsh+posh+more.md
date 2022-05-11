@@ -3,6 +3,14 @@ This guide will look at various ways you can improve your productivity by extend
 - **zsh plugins**: Auto-suggestions, completion, syntax highlighting and more.
 - **prompts + themes**: Customize a clean prompt that displays contextual information, either using Powerlevel10k or Posh.
 
+We'll go from this:
+
+![bash](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/15hhws1lffppj64y7wao.png)
+
+To this:
+
+![zsh](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b4pd70jflqn9tnuo73t0.png)
+
  
 ## Getting Started
 1. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation) for any Unix based shell or WSL2, which bundles `zsh` with a set of plugins and themes.
@@ -59,6 +67,7 @@ Depending on what other software you use, there are plenty of lightweight plugin
 These plugins do not come with `oh-my-zsh`, so you must clone the repos and place them in `~/ohmyzsh/custom/plugins/` before adding them to the `plugins` list in the `.zshrc`.
 - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh):
 Suggests commands as you type based on history and completions, which can then be selected with <kbd>→</kbd>.
+
 ![zsh-autosuggestions](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rek9zpxp2lkjou2n64f3.png)
  - Autosuggestions can either use your `history`, or tab `completion`. Set this with the `ZSH_AUTOSUGGEST_STRATEGY` variable.
  - Has some compatability issues where the suggestion is not cleared after certain actions. To fix this, add the following to your `.zshrc`:
@@ -66,8 +75,10 @@ Suggests commands as you type based on history and completions, which can then b
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-search expand-or-complete accept-line push-line-or-edit)
 ```
 - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh): Syntax highlighting for the shell zsh.
+- 
 ![zsh-syntax-highlighting](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n07i2pez1s2z23awk3id.png)
 - [`zsh-autocomplete`](https://github.com/marlonrichert/zsh-autocomplete#manual-installation): Provides completion suggestions below the prompt, in addition to a history menu. This one is powerful, but might take some getting used to. Like with autosuggestions, you can choose whether you want to use normal completions (directories, man, etc.) or history search. I like to have autocomplete for normal completions and autosuggestions for history.
+
 ![zsh-autocomplete](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ighgss04o86loeocmjhc.png)
  If you're like me and don't like the history menu, but want all the other features, you can change the keybinds to use a simple history search in your `.zshrc` (make sure this is _after_ the plugins have been loaded):
 ```bash
@@ -104,7 +115,9 @@ We can improve our prompt to contain additional information, such as execution t
 ZSH_THEME="mytheme"
 ```
 I like `agnoster` best:
+
 ![agnoster](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ind73zeythcovna9u54a.png)
+
 As nice as our prompt looks, we can take things further.
 We have 2 options:
 
@@ -114,13 +127,14 @@ We have 2 options:
 
 This is what my prompt looks like:
 
-![Powerlevel10k](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i35t7zz1mj4upb5dsfvc.png)
+![powerlevel10k](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sjd33y95r6wcv3it5g8x.png)
 
 I've modified the configuration a bit to use custom icons for specific directories and cleaned up the git status a bit. See my [`.p10k.zsh`](https://github.com/Tim-W-James/.dotfiles/blob/main/oh-my-zsh/.p10k.zsh)
 
 ### Option B: oh-my-posh
 
 [oh-my-posh](https://ohmyposh.dev/docs/linux):
+
 ![clean-detailed](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/576uc6ny0fjdzi0bo4x4.png) provides a wide range of themes to choose from, though is missing some features of Powerlevel10k such as instant prompt.
 * Follow installation instructions and find a [theme](https://ohmyposh.dev/docs/themes) you like. Some favourites of mine are `clean-detailed`, `blueish`, or `nu4a`.
 * Add the path to your chosen theme to `.zshrc`:

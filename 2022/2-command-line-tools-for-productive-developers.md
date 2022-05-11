@@ -13,7 +13,7 @@ _Note_: for any `npm` packages, make sure to install globally with `-g`.
  - See [this](https://dev.to/andrenbrandao/terminal-setup-with-zsh-tmux-dracula-theme-48lm#tmux-amp-dracula-theme) blog to get started with tmux.
  - See my [`.tmux.conf`](https://github.com/Tim-W-James/.dotfiles/blob/main/tmux/.tmux.conf).
  - Alternatively, you can also use [oh-my-tmux](https://github.com/gpakosz/.tmux) along with a bunch of plugins to extend the capabilities of tmux. See my [`.tmux.conf.local`](https://github.com/Tim-W-James/.dotfiles/blob/main/tmux/.tmux.conf.local) which has my current configuration using this framework. This is what my tmux looks like, with a customized status bar: 
-![oh-my-tmux](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yizkmnhrgpgd16jn3kz0.png)
+![oh my tmux](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8ytdjuebjwkhwlsqeohm.png)
 - [`bat`](https://github.com/sharkdp/bat#installation): Better `cat` - supports syntax highlighting for a large number of programming and markup languages.
 ![bat](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wc1m4zsj98ecniw7rup2.png)
 - [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy#install): Makes your diffs human readable instead of machine readable. Go [here](##Git) to see usage with Git.
@@ -27,6 +27,7 @@ diffs() {
 - [`thefuck`](https://github.com/nvbn/thefuck#installation): Corrects errors in previous console commands.
 - [`how2`](https://github.com/santinic/how2#install): Finds the simplest way to do something in a unix shell using a natural language query.
 - [`direnv`](https://github.com/direnv/direnv/blob/master/docs/installation.md): Load and unload environment variables depending on the current directory (for `oh-my-zsh` users, see [this](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dotenv) alternative)
+- [`asdf`](https://github.com/asdf-vm/asdf#setup): Manage multiple runtime versions with a single CLI tool.
 - [`glow`](https://github.com/charmbracelet/glow#installation): Terminal based markdown reader.
 
  
@@ -58,7 +59,10 @@ fi
 ```
 - [`exa`](https://the.exa.website/): Alternative to `colorls` (use the `--icons` flag to get icons like `colorls`).
 - [`tree`](https://www.cyberciti.biz/faq/linux-show-directory-structure-command-line/): Visualize directories in a tree-like format (lightweight alternative to `colorls` with the `-t` flag).
+
 ![tree](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1d7kg883xlj4xztl5nc2.png)
+
+- [`broot`](https://github.com/Canop/broot#broot): Like tree, but works better with big directories.
 - [`z`](https://github.com/rupa/z): Quickly jump between directories based on history (For `zsh` users, it is easier to install [this](https://github.com/agkozak/zsh-z#for-oh-my-zsh-users) plugin)
 
  
@@ -67,6 +71,11 @@ fi
 ![vtop](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4sv4c9jfo0dr4lt598vb.png)
 - [`croc`](https://github.com/schollz/croc#install): Simple file transfer via CLI.
 - [`secman`](https://github.com/scmn-dev/secman#installation-): CLI password manager.
+- [`hyperfine`](https://github.com/sharkdp/hyperfine): A command-line benchmarking tool.
+- [`gping`](https://github.com/orf/gping#install-cd): Ping, but with a graph.
+- [`procs`](https://github.com/dalance/procs#homebrew): Replacement for ps.
+- [`dog`](https://github.com/ogham/dog#installation): Command-line DNS client.
+- [`duf`](https://github.com/muesli/duf#installation): A better df alternative.
 
  
 ## Git
