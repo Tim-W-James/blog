@@ -20,7 +20,7 @@ plugins=(
 
 ### Plugins Included with oh-my-zsh
 - `sudo`: Easily prefix your current or previous commands with `sudo` by pressing <kbd>esc</kbd> twice.
-- `dotenv`: Automatically load your project `ENV` variables from `.env` file when you cd into project root directory. By default, it will prompt before loading, but you can turn this off by adding the following to your `.zshrc`:
+- `dotenv`: Automatically load your project `ENV` variables from `.env` file when you cd into project root directory. By default, it will prompt before loading, but you can turn this off by adding the following to your `.zshrc` (though be wary of the security implications of this):
 ```bash
 export ZSH_DOTENV_PROMPT=false
 ```
@@ -40,9 +40,10 @@ MAGIC_ENTER_OTHER_COMMAND='ls -la .'
 ```
 - `jsontools`: Handy command line tools for dealing with json data.
 
-Depending on what other software you use, there are plenty of lightweight plugins that improve autocompletion and provide aliases amoung other things. I use:
+Depending on what other software you use, there are plenty of lightweight plugins that improve autocompletion and provide aliases among other things. I use:
 - `git`: Aliases for Git
 - `gh`: Completions for GitHub cli 
+- `git-auto-fetch`: Periodically run `git fetch`
 - `nvm`: Completions for nvm
 - `npm`:  Completions + aliases for npm
 - `aws`: Completions for aws
@@ -92,6 +93,7 @@ zstyle ':completion:*' menu select=long
 ```
  For a full list of config options, go [here](https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc).
 - [`zsh-z`](https://github.com/agkozak/zsh-z#for-oh-my-zsh-users): Tool to jump quickly to directories that you have visited frequently.
+- [`zsh-direnv`](https://github.com/ptavares/zsh-direnv): Alternative to `dotenv`, which also provides the use of a `.envrc` with utility functions.
 
 To take things further, I recommend checking out [this](https://github.com/unixorn/awesome-zsh-plugins) curated list of plugins. 
 
