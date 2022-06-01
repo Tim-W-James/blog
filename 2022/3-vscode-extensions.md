@@ -17,6 +17,11 @@ VSCode is highly extensible and customizable. Though VSCode is technically a tex
 - [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl): Open any folder in the Windows Subsystem for Linux (WSL).
 - [Cacher](https://marketplace.visualstudio.com/items?itemName=Cacher.cacher-vscode): Code snippet manger via GitHub gists (paid extension).
 - [vscode-spotify](https://marketplace.visualstudio.com/items?itemName=shyykoserhiy.vscode-spotify): Use Spotify inside vscode (requires a Spotify subscription).
+- [Browse Lite](https://marketplace.visualstudio.com/items?itemName=antfu.browse-lite): Embedded browser in VS Code.
+- [Choose A License](https://marketplace.visualstudio.com/items?itemName=ultram4rine.vscode-choosealicense): Choose a license for your project in VS Code.
+- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): EditorConfig Support for Visual Studio Code.
+- [vscode-database](https://marketplace.visualstudio.com/items?itemName=bajdzis.vscode-database): Support mysql, postgres, SSL, socked - SQL database.
+- [Snyk](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner): Easily find and fix vulnerabilities in both your code and open source dependencies with fast and accurate scans.
 
 ## Productivity
 
@@ -51,6 +56,7 @@ Note: this is now a built-in feature of VSCode, add the following to your settin
 - [Tab Out](https://marketplace.visualstudio.com/items?itemName=albert.TabOut): Tab out of quotes, brackets, etc.
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-spellchecker): Spell check your code.
 - [DotEnv](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv): Support for dotenv file syntax.
+- [Highlight Bad Chars](https://marketplace.visualstudio.com/items?itemName=wengerk.highlight-bad-chars): Highlight bad characters such as No-break space ( ) and the Greek question mark (;) in your source files.
 
 ## File Managment
 
@@ -84,12 +90,16 @@ There are plenty of themes to choose from and this comes down to personal prefer
 
 For pretty much any language out there, you can find extensions for syntax highlighting, linting, formatter, and so on. I'll omit most of those sorts of extensions here, and instead focus on some more interesting or unique extensions.
 
-### JavaScript
+### JavaScript, etc.
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): Linting for JavaScript (I know I said no linters, etc. but this is a must-have).
 - [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script): npm support for VS Code.
 - [Add jsdoc comments](https://marketplace.visualstudio.com/items?itemName=stevencl.addDocComments): Adds simple jsdoc comments for the parameters of a selected function signature.
 - [Wrap Console Log](https://marketplace.visualstudio.com/items?itemName=midnightsyntax.vscode-wrap-console-log): Wrap to console.log by word or selection.
+- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): Display import/require package size in the editor.
+- [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport): Automatically finds, parses and provides code actions and code completion for all available imports.
+- [Glean](https://marketplace.visualstudio.com/items?itemName=wix.glean): The extension provides refactoring tools for your React codebase.
+- [TypeScript Error Translator](https://marketplace.visualstudio.com/items?itemName=mattpocock.ts-error-translator): TypeScript errors, translated for humans.
 
 ### HTML
 
@@ -147,6 +157,38 @@ For writing blogs like this one. VSCode has pretty good out-of-the-box support f
   "editor.cursorSmoothCaretAnimation": true,
   ```
 
-  - Install a custom font. I use [Caskaydia Cove Nerd Font](https://www.nerdfonts.com/font-downloads).
+  - Install a custom font. I use [Caskaydia Cove Nerd Font](https://www.nerdfonts.com/font-downloads). Turn on ligatures `"editor.fontLigatures": true,` for multi-character symbols.
+  - Turn on file nesting to group together similar files:
 
+  ```json
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock",
+    "README.md": "LICENSE.txt",
+    ".eslintrc.*": ".eslintignore, .prettierrc.*, .eslintrc-auto-import.json"
+  },
+  "explorer.fileNesting.expand": false
+  ```
+
+  - Format and organize imports on save:
+  
+  ```json
+  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  ```
+
+  - Auto fetch from version control:
+
+  ```json
+  "git.autofetch": true,
+  ```
+  
 Feel free to comment with any extensions or tips I have missed and I'll add them to the list!
